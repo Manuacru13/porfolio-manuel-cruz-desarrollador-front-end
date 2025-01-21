@@ -1,8 +1,10 @@
 :root {
     --color-primario: #6a11cb;
     --color-secundario: #212529;
-    ---color-texto: #fff;
+    --color-texto: #fff;
     --color-hover: #4285F4;
+    --color-fondo: #f8f5f2;
+   
 }
 
 * {
@@ -11,59 +13,60 @@
     box-sizing: border-box;
 }
 
+/* ========================== */
 /* General */
+/* ========================== */
+
+/* Aplicar la fuente Roboto al cuerpo */
 body {
-    font-family: 'Poppins', sans-serif;
-    /* Usa Google Fonts para una tipografía moderna */
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background: #f8f5f2;
+    background: var(--color-fondo);
+    
 }
 
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ========================== */
 /* Header y Navbar */
+/* ========================== */
 .logo-img {
     width: 50px;
-    /* Ajusta el tamaño según tus preferencias */
     height: 50px;
-    /* Asegura que la imagen sea cuadrada */
     border-radius: 50%;
-    /* Hace que la imagen sea circular */
     margin-right: 15px;
-    /* Espacio entre el logo y los enlaces de navegación */
 }
 
 .nav-link {
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin-right: 15px;
-
 }
 
 .nav-link:hover {
     color: var(--color-primario);
-    transition: color 0.3s;
-    transform: scale(1.1);
+    transition: color 0.3s ease-in-out;
 }
 
 .navbar-nav {
     margin: 0 auto;
-    /* Centra el menú dentro del contenedor */
-    text-decoration: none;
     padding: 10px 15px;
-    /* Espaciado uniforme para enlaces */
 }
 
+/* ========================== */
 /* Sección Inicio */
-
+/* ========================== */
 #inicio {
     background: url('img/software-developer-6521720_1920.jpg') no-repeat center center/cover;
     color: white;
     height: 50vh;
-
 }
 
 #inicio .btn {
     background-color: var(--color-primario);
     border: none;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease-in-out;
 }
 
 #inicio .btn:hover {
@@ -71,9 +74,12 @@ body {
     background-color: var(--color-hover);
 }
 
+/* ========================== */
 /* Sección Sobre Mí */
+/* ========================== */
 #sobre-mi {
     background: var(--color-fondo);
+    padding: 2rem 0;
 }
 
 #sobre-mi h2 {
@@ -88,86 +94,84 @@ body {
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
-    /* Hace la imagen circular */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Sombra sutil */
     border: 4px solid var(--color-primario);
 }
 
-
 #sobre-mi p {
-    color: var(--color-texto);
+    color: var(--color-secundario);
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 1rem;
-    /* Espaciado entre párrafos */
 }
 
 #sobre-mi .btn {
     background-color: var(--color-primario);
-    color: var(---color-texto);
+    color: var(--color-texto);
     border: none;
     padding: 10px 20px;
     font-size: 1rem;
     border-radius: 25px;
-    transition: transform 0.3s, background-color 0.3s;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 #sobre-mi .btn:hover {
     background-color: var(--color-hover);
     transform: scale(1.1);
-    color: var(---color-texto);
 }
 
-#sobre-mi .col-md-4 .btn {
-    margin-top: 20px; /* Ajusta el espacio entre la foto y el botón */
-}
-
-
+/* ========================== */
 /* Sección Proyectos */
+/* ========================== */
 #proyectos {
     background: var(--color-fondo);
+    padding: 2rem 0;
 }
 
 #proyectos h2 {
     font-weight: bold;
     color: var(--color-secundario);
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 .card {
     border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     text-align: center;
 }
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 16px var(--color-primario);
+    box-shadow: 0 8px 16px rgba(106, 17, 203, 0.2);
 }
 
 .card-title {
     color: var(--color-primario);
 }
 
-
-.card:hover {
-    transform: scale(1.1);
-    /* Aumenta ligeramente el tamaño */
-}
-
 .btn-outline-primary {
     border-color: var(--color-primario);
     color: var(--color-primario);
-    transition: transform 0.3s;
+    transition: transform 0.3s ease-in-out;
 }
 
 .btn-outline-primary:hover {
     transform: scale(1.1);
     background-color: var(--color-primario);
-    color: var(---color-texto);
-    border-color: var(---color-texto);
+    color: var(--color-texto);
+    border-color: var(--color-texto);
 }
+
+.mt-3 {
+     margin-top: 1rem;
+     margin-bottom: 1rem;
+     }
+
+.me-2 {
+     margin-right: 0.5rem;
+     }
 
 .btn-outline-secondary {
     border-color: var(--color-hover);
@@ -178,11 +182,13 @@ body {
 .btn-outline-secondary:hover {
     transform: scale(1.1);
     background-color: var(--color-hover);
-    color: var(---color-texto);
-    border-color: var(---color-texto);
+    color: var(--color-texto);
+    border-color: var(--color-texto);
 }
 
+/* ========================== */
 /* Sección Contacto */
+/* ========================== */
 #contacto {
     background-color: #ffffff;
     color: #333333;
@@ -190,7 +196,7 @@ body {
 }
 
 #contacto h2 {
-    color: var(--color-primario);
+    color: var(--color-secundario);
     font-weight: bold;
     text-align: center;
     margin-bottom: 30px;
@@ -199,32 +205,9 @@ body {
 
 #contacto form {
     background-color: #f8f9fa;
-    /* Fondo claro */
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Sombra suave */
-}
-
-#contacto .form-label {
-    color: #555555;
-    font-size: 1rem;
-    font-weight: 500;
-}
-
-#contacto .form-control {
-    background-color: #ffffff;
-    border: 1px solid #ced4da;
-    /* Gris claro */
-    color: #333333;
-    border-radius: 4px;
-}
-
-#contacto .form-control:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-    /* Azul suave */
-    border-color: #007bff;
 }
 
 #contacto .btn-primary {
@@ -233,7 +216,7 @@ body {
     padding: 10px 20px;
     font-size: 1.2rem;
     border-radius: 25px;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 #contacto .btn-primary:hover {
@@ -241,33 +224,19 @@ body {
     transform: scale(1.05);
 }
 
-#contacto .text-center a {
-    color: #007bff;
-    transition: color 0.3s, transform 0.3s;
-}
-
-#contacto .text-center a:hover {
-    color: #0056b3;
-    transform: scale(1.1);
-}
-
-#contacto i {
-    transition: transform 0.3s;
-}
-
-#contacto i:hover {
-    transform: scale(1.2);
-}
-
+/* ========================== */
 /* Footer */
+/* ========================== */
 footer {
     font-size: 0.9rem;
     background: #111;
     color: #ccc;
+    text-align: center;
+    padding: 1rem 0;
 }
 
 footer a {
-    color: var(--color-resaltado);
+    color: var(--color-primario);
     text-decoration: none;
 }
 
@@ -275,68 +244,67 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Estilos del preloader */
+/* ========================== */
+/* Preloader */
+/* ========================== */
 #preloader {
+    background-color: #f0f0f0; /* Fondo claro */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-color: #ffffff;
-    /* Fondo blanco */
-    z-index: 9999;
-    /* Siempre encima */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.5s ease;
+    height: 100vh; /* Full viewport height */
+    z-index: 9999; /* Aseguramos que se muestre encima de todo */
 }
 
-.preloader-content {
-    text-align: center;
+.preloader-logo-wrapper {
+    display: inline-block;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border: 5px solid transparent;
+    border-radius: 50%;
+    animation: drawLogo 2s ease-in-out forwards;
 }
 
 .preloader-logo {
-    width: 80px;
-    /* Tamaño del logo */
-    height: 80px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
-    /* Hacerlo circular */
-    animation: spin 2s linear infinite;
-    /* Animación de rotación */
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .preloader-title {
     font-size: 1.5rem;
-    font-family: 'Poppins', sans-serif;
-    margin-top: 15px;
-    color: #333;
-    animation: fadeIn 1.5s ease-in-out infinite alternate;
+    color: #000;
 }
 
-/* Animaciones */
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
 
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0.3;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-/* Ocultar el preloader después de cargar */
 body.loaded #preloader {
-    opacity: 0;
     visibility: hidden;
 }
+
+#preloader {
+    transition: opacity 0.5s ease-out;
+    opacity: 1;
+}
+
+#preloader.fade-out {
+    opacity: 0;
+}
+
+@keyframes drawLogo {
+    0% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: var(--color-primario);
+    }
+    100% {
+        border-color: transparent;
+    }
+}
+
