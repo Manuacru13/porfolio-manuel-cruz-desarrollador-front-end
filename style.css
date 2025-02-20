@@ -54,6 +54,16 @@ h1, h2, h3 {
     padding: 10px 15px;
 }
 
+.btn-primary {
+    background-color: #0d6efd;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
 /* ========================== */
 /* Sección Inicio */
 /* ========================== */
@@ -118,6 +128,11 @@ h1, h2, h3 {
 #sobre-mi .btn:hover {
     background-color: var(--color-hover);
     transform: scale(1.1);
+}
+
+.icon {
+    font-size: 32px; /* Ajusta el tamaño del ícono */
+    color: #68A063; /* Color oficial de Node.js */
 }
 
 /* ========================== */
